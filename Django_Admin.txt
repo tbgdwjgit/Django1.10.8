@@ -1,0 +1,18 @@
+Django Admin 管理工具
+
+Django 提供了基于 web 的管理工具。
+Django 自动管理工具是 django.contrib 的一部分。你可以在项目的 settings.py 中的 INSTALLED_APPS 看到它：
+settings.py 文件代码：
+INSTALLED_APPS = (
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'django.contrib.staticfiles',
+)
+django.contrib是一套庞大的功能集，它是Django基本代码的组成部分。
+
+使用管理工具启动开发服务器，然后在浏览器中访问 http://127.0.0.1:8000/admin/
+
+你可以通过命令 python manage.py createsuperuser 来创建超级用户

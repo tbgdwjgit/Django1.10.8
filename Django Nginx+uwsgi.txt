@@ -1,0 +1,15 @@
+Django Nginx+uwsgi 安装配置
+我们一般使用 python manage.py runserver 来运行服务器,这只适用测试环境中使用。
+正式发布的服务，我们需要一个可以稳定而持续的服务器，比如apache, Nginx, lighttpd等。
+
+
+
+
+
+
+
+
+
+
+
+
