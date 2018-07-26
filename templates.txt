@@ -40,6 +40,7 @@ include 标签
 {% extends "base.html" %}
 {% extends   "你的模板页面"%}必须放在子页面的开头，前面连一个注释行都不可以。
 
-
+TemplateDoesNotExist （Django 1.11.6 Python 3.6）
+没找到模板的问题一般都较为简单，在print(BASE_DIR)之后发现目录还有一级，再填上就好了。
 
 

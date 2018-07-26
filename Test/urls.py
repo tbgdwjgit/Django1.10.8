@@ -17,9 +17,15 @@ from django.conf.urls import url
 from django.contrib import admin
 from Test import views
 from webdev import urls
+from webdev.search import search
+from webdev.search import search_form
+from webdev import search2
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.first_page),
     url(r'^webdev/', urls.first_page),
+    url(r'^search-form$', search_form),
+    url(r'^search$', search),
+    url(r'^search-post$', search2.search_post),
 ]
