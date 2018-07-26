@@ -1,0 +1,45 @@
+实现数据与视图分离
+1.在项目根目录底下创建 templates 目录并建立 hello.html文件
+  <h1>{{ hello }}</h1>
+2.修改根目录的settings.py，修改 TEMPLATES 中的 DIRS 为 [BASE_DIR+"/templates",]
+
+3.修改 view.py
+  from django.shortcuts import render
+
+  def hello(request):
+      context          = {}
+      context['hello'] = 'Hello World!'
+      return render(request, 'hello.html', context)
+
+Django 模板标签
+if/else 标签
+{% if condition %}
+     ... display
+{% endif %}
+
+{% if condition1 %}
+   ... display 1
+{% elif condition2 %}
+   ... display 2
+{% else %}
+   ... display 3
+{% endif %}
+
+for 标签
+
+
+ifequal/ifnotequal 标签
+
+注释标签Django 注释使用 {# #}。{# 这是一个注释 #}
+
+过滤器
+
+include 标签
+
+模板继承
+{% extends "base.html" %}
+{% extends   "你的模板页面"%}必须放在子页面的开头，前面连一个注释行都不可以。
+
+
+
+
