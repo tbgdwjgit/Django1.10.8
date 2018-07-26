@@ -1,0 +1,37 @@
+1.创建一个Django Project
+  django-admin.py startproject mysite
+
+2.启动刚刚创建的Project
+  进入mysite目录，并运行python manage.py runserver命令。
+  默认情况下runserver的启动端口是8000，如果需要更改端口号，可以将其以参数的形式传进去:
+  python manage.py runserver 8080
+
+3. 启动交互式的命令模式
+  通常需要测试一些简单的Django代码，这时就可以使用这种交互式的shell来完成
+  python manage.py shell
+
+4. 创建Django App
+  python manage.py startapp books
+
+5. 校验Model的有效性
+  通常为了连接数据库，我们需要创建与数据库表相对应的Model，当Model创建好之后可以使用下面的命令来校验Model的有效性
+  python manage.py validate # 如果看到了如下的输出信息，表示你的Model没有问题 0 errors found
+
+6. 生成SQL schema
+  确认Model没有问题时候，Django为我们提供了一个工具帮助生成创建数据库的schema
+  python manage.py sqlall books
+  这个命令可以将创建Table的shema输出到命令行，但是不能将其同步创建到数据库，为了将其同步到数据库中，Django也为我们考虑到了
+
+7. 同步Model到数据库
+   $ python manage.py syncdb
+   # Django 还提供了另一个工具方便我们直接登录到数据库中
+   $ python manage.py dbshell
+
+
+
+
+
+
+
+
+
